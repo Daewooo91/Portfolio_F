@@ -4,8 +4,8 @@
   --color-white: #ffffff;
   --color-light-white: #eeeeee;
   --color-dark-white: #bdbdbd;
-  --color-blue: #91ddd9;
-  --color-dark-blue: #5ac1be;
+  --color-blue: #b4e9e6;
+  --color-dark-blue: #99e5e2;
   --color-grey: #616161;
   --color-light-grey: #7c7979;
   --color-dark-grey: #4d4d4d;
@@ -95,12 +95,22 @@ button {
 
   /* Navbar */
   #navbar {
+    position: fixed;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    background: linear-gradient(45deg, rgb(104, 195, 198), rgb(123, 219, 232), rgb(178, 233, 240));
+    background-color: transparent;
+    /* background-color: var(--color-blue); */
+    /* background: linear-gradient(45deg, rgb(104, 195, 198), rgb(123, 219, 232), rgb(178, 233, 240)); */
     align-items: center;
     color: var(--color-white);
     padding: 16px;
+    transition: all var(--animation-duration) ease-in;
+  }
+
+  #navbar.navbar--dark {
+    background-color: var(--color-blue);
+    padding: 8px;
   }
 
   .navbar__menu {
@@ -130,6 +140,7 @@ button {
   .navbar__toggle-btn {
     position: absolute;
     right: 32px;
+    top: 23px;
     font-size: 24px;
     color: var(--color-white);
     display: none;
@@ -139,6 +150,7 @@ button {
 #home {
   background: url("./imgs/home-background.png") center/cover no-repeat;
   padding: 40px;
+  padding-top: 120px;
   text-align: center;
 }
 
