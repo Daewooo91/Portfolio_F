@@ -404,17 +404,17 @@ button {
 }
 
 .project__description h3 {
-  color: var(--color-white);
+  color: var(--color-orange);
 }
 
 .project__description h3::after {
   display: block;
   position: relative;
   left: 50%;
-  margin-left: -12px;
+  transform: translateX(-50%);
   margin-top: 10px;
   content: '';
-  width: 25px;
+  width: 60px;
   height: 3px;
   background-color: var(--color-dark-white)
 }
@@ -518,6 +518,11 @@ button {
   #navbar {
     flex-direction: column;
     align-items: flex-start;
+    background-color: var(--color-blue);
+  }
+
+  #navbar.navbar--dark {
+    padding: 14px;
   }
 
   .navbar__menu {
@@ -525,6 +530,10 @@ button {
     text-align: center;
     width: 100%;
     display: none;
+  }
+
+  .navbar__menu.open {
+    display: block;
   }
 
   .about__majors {
@@ -537,6 +546,12 @@ button {
 
   .skillset {
     flex-direction: column;
+  }
+
+  .work__categories {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 50px;
   }
 
   .project {
